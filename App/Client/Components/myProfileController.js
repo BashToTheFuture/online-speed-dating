@@ -10,7 +10,7 @@ var myProfile = {
   data: function() {
     return {
       msg: `${this.$store.state.user.username} Welcome To Bash To The Dating!`,
-      background: '../Images/background.jpg',
+      background: '../Images/dating-bg.jpg',
       savedEvents: '',
       profileImg: 'http://www.returnofkings.com/wp-content/uploads/2014/04/online-dating-header2.jpg',
       match: true,
