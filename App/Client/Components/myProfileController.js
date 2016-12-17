@@ -44,7 +44,7 @@ var myProfile = {
       .catch((err) => { console.error('There was an err with your GET request, ', err); });
     },
     goToEvents() {
-      this.$router.push('/events');
+      this.$router.push('/events/' + this.username);
     },
     toDate (event) {
       this.$router.push('/date/' + event._id + '/active');

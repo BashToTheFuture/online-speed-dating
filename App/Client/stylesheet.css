@@ -1,15 +1,13 @@
 html {
     overflow-x: hidden;
 }
-
 body {
     background: #476c75;
     /*overflow-x: hidden;*/
-
 }
 #logo {
-    height: 50px;
-    width: 50px;
+    height: 60px;
+    width: 250px;
 }
 .background {
     min-height: 100%;
@@ -37,11 +35,9 @@ body {
 }
 .message {
     color: #fff;
-    margin-left: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 45px;
     font-weight: lighter;
     background: #2c4355;
-    padding-left: 20px;
     font-size: 42px;
 }
 .img_icons {
