@@ -28,7 +28,7 @@ var myProfile = {
 
   methods: {
     goToEvents() {
-      this.$router.push('/events');
+      this.$router.push('/events/' + this.username);
     },
     toDate (event) {
       this.$router.push('/date/' + event._id + '/active');

@@ -1,8 +1,6 @@
 <template>
     <div>
         <div v-if="!checkAuth">
-
-            
                 <div class="row">
                     <div>
                         <h2 class="jumbotron sup">Sign-up here!</h2>

@@ -9,7 +9,8 @@ const navbar = {
     return {
       user: {
         isAuth: auth.user.isAuth
-      }
+      },
+      background: '../Images/bash-logo.png'
     };
   },
   computed: {
