@@ -1,5 +1,5 @@
 <template>
-  <div class="navbar navbar-default">
+  <div class="navbar navbar-dark bg-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
       <a href="#" v-on:click.prevent="goToMyProfile">
@@ -32,3 +32,9 @@
     </div><!-- /.container-fluid -->
   </div>
 </template>
+
+<style>
+  .navbar {
+    background-color: black;
+  }
+</style>
