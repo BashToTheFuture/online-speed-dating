@@ -61,6 +61,6 @@
         background-color: #ffffff;
     }
     tr:nth-child(odd) {
-        background-color: #d9b883;
+        background-color: #FBAF64;
     }
 </style>
