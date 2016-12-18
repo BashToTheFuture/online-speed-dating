@@ -1,9 +1,9 @@
 <template>
-  <div class="navbar navbar-default">
+  <div class="navbar navbar-dark bg-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
       <a href="#" v-on:click.prevent="goToMyProfile">
-        <img id="logo" src="http://previews.123rf.com/images/iqoncept/iqoncept1204/iqoncept120400078/13406052-Les-mots-We-Can-Do-It-en-lettres-rouges-pour-symboliser-la-confiance-3d-et-une-attitude-positive-n-c-Banque-d'images.jpg" alt="">
+        <img id="logo" :src="background" alt="logoImage">
       </a>
     </div>
       <ul v-if="checkAuth()" class="nav navbar-nav navbar-right">
@@ -32,3 +32,9 @@
     </div><!-- /.container-fluid -->
   </div>
 </template>
+
+<style>
+  .navbar {
+    background-color: black;
+  }
+</style>
