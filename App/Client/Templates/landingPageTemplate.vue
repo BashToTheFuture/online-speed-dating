@@ -1,8 +1,8 @@
 <template>
 <div>
-    <div class="message pull-right">
+    <div class="message">
     <img class="background" :src="background" alt="backgroundImage">
-        {{ msg }}
+        <!-- {{ msg }} -->
     </div>
     <div class="col-md-4 col-md-offset-7">
       <profilelink></profilelink>

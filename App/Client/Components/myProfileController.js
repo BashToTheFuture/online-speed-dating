@@ -9,7 +9,7 @@ var myProfile = {
   template: temp.template,
   data: function() {
     return {
-      msg: `${this.$store.state.user.username} Welcome To Bash To The Dating!`,
+      msg: `Welcome To Bash To The Dating! ${this.$store.state.user.username}`,
       background: '../Images/dating-bg.jpg',
       savedEvents: this.$store.state.savedEvents,
       // allEvents: this.$store.state.allEvents,

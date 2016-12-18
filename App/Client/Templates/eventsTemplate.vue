@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="etable">
         <table>
         <tr>
             <th> Do-you? </th>
@@ -25,7 +25,11 @@
     a:hover {
         color: #fff;
     }
-
+    .etable {
+        margin-top: 50px;
+        margin-left: 50px;
+        font-size: 16px;
+    }
     #eventLink {
         margin-top: 20px;
         font-weight: 800;
@@ -35,19 +39,16 @@
         width: 75%;
         color: #fff;
     }
-
     #signIn {
         display: block;
     }
-
     table {
         font-family: arial, sans-serif;
         border-collapse: collapse;
-        width: 75%;
+        width: 85%;
         font-weight: 800;
         text-align: center;
     }
-
     td,
     th {
         border: 1px solid rgba(165, 166, 167, 0.08);
@@ -56,11 +57,9 @@
         font-weight: 800;
         text-align: center;
     }
-
     tr:nth-child(even) {
         background-color: #ffffff;
     }
-
     tr:nth-child(odd) {
         background-color: #d9b883;
     }
