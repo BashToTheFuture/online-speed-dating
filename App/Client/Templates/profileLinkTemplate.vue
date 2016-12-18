@@ -3,7 +3,7 @@
         <div v-if="!checkAuth">
                 <div class="row">
                     <div>
-                        <h2 class="jumbotron sup">Sign-up here!</h2>
+                        <h1 class="jumbotron sup">Sign-up here!</h1>
                         <h4 class="jumbotron">Signup via</h4>
                         <div class="social-buttons jumbotron">
                             <a href="#" class="btn btn-fb"><i class="fa fa-facebook"></i> Facebook</a>
@@ -26,9 +26,9 @@
         padding-left: 0;
         padding-right: 0;
     }
-    h2.jumbotron.sup {
+    h1.jumbotron.sup {
         padding-top: 28px;
-        padding-left: 42px;
+        padding-left: 20px;
         margin: 0;
     }
     .social-buttons.jumbotron {
