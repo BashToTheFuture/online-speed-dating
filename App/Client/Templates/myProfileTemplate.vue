@@ -20,11 +20,12 @@
                 <div>
                     <p id="profText">Description: {{user.description}}</p>
                 </div>
-                <div id="editButton">
+<!--                 <div id="editButton">
                     <span><button class="glyphicon glyphicon-cog" v-if='this.$store.state.user.username' v-on:click='editProfile'></button></span>
+                </div> -->
+                <div id="adminButton" v-if="admin">
+                <button class="btn btn-primary" v-on:click='goToAdmin'>Admin</button>
                 </div>
-            <div id="adminButton" v-if="admin">
-                <button class="btn btn-primary" v-on:click='goToAdmin'>Admin</button></div>
             </div>
         </div>
         <div class="col-md-9 col-sm-offset-6" id="my-events">
@@ -46,15 +47,31 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-9">
-                    <button class="btn btn-primary pull-right" v-on:click="goToEvents">See More</button> 
+                <div v-else>
+                    <div id="eventColumn" class="col-md-5">
+                        <div>
+                            <h2 class="overhead">My Events:</h2>
+                            <ul v-for='event in events'>
+                                <div id="event" class="row">
+                                    <a id="clickEvent">
+                                        <li id="eventDetails"> {{ moment(event.date).format('MMMM Do YYYY, h:mm:ss a') }} </li>
+                                        <li id="eventDetails"> {{ event.eventName }} </li>
+                                        <li id="eventDetails"> {{ event.eventType }} </li>
+                                        <li id="eventDetails">Go on date<button id="eventButton" class="glyphicon glyphicon-menu-right glyphicon glyphicon-glass"></button></li>
+                                    </a>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-
+        <div class="smbutton">
+            <button class="btn btn-primary pull-right" v-on:click="goToEvents">See More</button> 
+        </div>
         <div class="col-md-9 col-sm-offset-6" id="divsg">
             <div>
-                <div v-if="match" id="eventColumnSg" class="col-md-7 col-md-offset-2">
+                <div v-if="match" id="eventColumnSg" class="col-md-9 col-md-offset-5">
                     <div>
                         <h2 class="overhead">My Events:</h2>
                         <ul v-for='event in savedEvents'>
@@ -71,10 +88,8 @@
                 </div>
             </div>
         </div>
-        <!--<div>*Place holder for matchs*</div>-->
-
-        
     </div>
+
 </template>
 
 <style>
@@ -98,7 +113,7 @@ h2.overhead {
 }
 #eventDetails {
     list-style-type: none;
-    padding-left: 30px;
+    padding-left: 20px;
 }
 #username {
     color: black;
@@ -126,6 +141,7 @@ h2.overhead {
 }
 #editButton {
     float: right;
+    size: 80%;
     /*color:#75B2E1;*/
 }
 #profileImg {
@@ -138,10 +154,12 @@ h2.overhead {
     background-color: black;
     padding-top: 2px;
     padding-bottom: 2px;
+    /*width: 420px;*/
 }
 .suggested-events-list {
     height: 280px;
     overflow-y: auto;
+    margin-bottom: 15px;
 }
 /*#eventDetails:nth-child(even) {
     border: 1px solid tomato;
@@ -159,24 +177,25 @@ h2.overhead {
     float: right;
     color: #75B2E1;
     padding-bottom: 3px;
+    margin-right: 15px;
 }
-.col-md-9 {
-    padding-right: 102px;
-    margin-top: 15px;
+.smbutton {
+    padding-right: 34px;
 }
 #my-events {
     margin-top: 20px;
 }
 #eventColumnSg {
     background-color: rgb(227, 226, 226);
-    margin-left: 80px;
-    margin-top: 470px;
+    margin-left: 45px;
+    margin-top: 420px;
     position: relative;
     border-radius: 10px;
-
+    width: 600px;
 }
 #divsg {
     position: absolute;
+    margin-left: 0;
 }
 
 </style>
