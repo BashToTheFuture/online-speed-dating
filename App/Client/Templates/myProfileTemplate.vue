@@ -108,12 +108,15 @@ h2.overhead {
 }
 #clickEvent {
     display: block;
-    width: 100%;
+    width: 95%;
     height: 100%;
+    color: black;
+    padding-left: 15px;
 }
 #eventDetails {
     list-style-type: none;
-    padding-left: 20px;
+    padding-left: 10px;
+    margin-right: 0;
 }
 #username {
     color: black;
@@ -127,9 +130,8 @@ h2.overhead {
     border-radius: 10px;
 }
 #eventColumn, #myEvent {
-    background-color: rgb(227, 226, 226);
+    background-color: rgba(77, 79, 80, 0.9);
     border-radius: 10px;
-
 }
 #eventColumn {
     margin-left: 60px;
@@ -150,11 +152,13 @@ h2.overhead {
     margin-right: 15px;
 }
 #event {
-    border: 1px solid #E5C9B0;
-    background-color: black;
+    background-color: #F3F1F1;
     padding-top: 2px;
     padding-bottom: 2px;
-    /*width: 420px;*/
+    color: black;
+    width: 420px;
+    border-radius: 10px;
+    margin-left: 22px;
 }
 .suggested-events-list {
     height: 280px;
@@ -186,9 +190,9 @@ h2.overhead {
     margin-top: 20px;
 }
 #eventColumnSg {
-    background-color: rgb(227, 226, 226);
-    margin-left: 45px;
-    margin-top: 420px;
+    background-color: rgba(77, 79, 80, 0.9);
+    margin-left: 770px;
+    margin-top: 500px;
     position: relative;
     border-radius: 10px;
     width: 600px;
