@@ -46,32 +46,8 @@
                         </div>
                     </div>
                 </div>
-                <div v-else>
-                    <div id="eventColumn" class="col-md-5">
-                        <div>
-                            <h2 class="overhead">My Events:</h2>
-                            <ul v-for='event in events'>
-                                <div id="event" class="row">
-                                    <a id="clickEvent">
-                                        <li id="eventDetails"> {{ moment(event.date).format('MMMM Do YYYY, h:mm:ss a') }} </li>
-                                        <li id="eventDetails"> {{ event.eventName }} </li>
-                                        <li id="eventDetails"> {{ event.eventType }} </li>
-                                        <li id="eventDetails">Go on date<button id="eventButton" class="glyphicon glyphicon-menu-right glyphicon glyphicon-glass"></button></li>
-                                    </a>
-                                </div>
-                            </ul>
-                        </div>
-                    </div>
-                    <div id='matchHorizon' class="col-md-5 col-md-offset-1">
-                        <div>
-                            <span>Matches:</span>
-                            <ul v-for='match in matches'>
-                                <ul> {{ match.profileImg }}</ul>
-                                <ul> {{ match.name }} </ul>
-                                <ul> {{ match.location }} </ul>
-                            </ul>
-                        </div>
-                    </div>
+                <div class="col-md-9">
+                    <button class="btn btn-primary pull-right" v-on:click="goToEvents">See More</button> 
                 </div>
             </div>
         </div>
@@ -80,7 +56,7 @@
             <div>
                 <div v-if="match" id="eventColumnSg" class="col-md-7 col-md-offset-2">
                     <div>
-                        <h2 class="overhead">Suggested Events:</h2>
+                        <h2 class="overhead">My Events:</h2>
                         <ul v-for='event in savedEvents'>
                             <div id="event" class="row">
                                 <a v-on:click="toDate(event)" id="clickEvent">
@@ -93,10 +69,6 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-md-9">
-                    <button class="btn btn-primary pull-right" v-on:click="goToEvents">See More</button> 
-                </div>
-
             </div>
         </div>
         <!--<div>*Place holder for matchs*</div>-->
@@ -121,16 +93,12 @@ h2.overhead {
 }
 #clickEvent {
     display: block;
-    width: 95%;
+    width: 100%;
     height: 100%;
-    color: black;
-    padding-left: 15px;
 }
 #eventDetails {
     list-style-type: none;
-    padding-left: 10px;
-    margin-right: 0;
-    /*width: 200px;*/
+    padding-left: 30px;
 }
 #username {
     color: black;
@@ -144,8 +112,9 @@ h2.overhead {
     border-radius: 10px;
 }
 #eventColumn, #myEvent {
-    background-color: rgba(77, 79, 80, 0.9);
+    background-color: rgb(227, 226, 226);
     border-radius: 10px;
+
 }
 #eventColumn {
     margin-left: 60px;
@@ -165,13 +134,10 @@ h2.overhead {
     margin-right: 15px;
 }
 #event {
-    background-color: #F3F1F1;
+    border: 1px solid #E5C9B0;
+    background-color: black;
     padding-top: 2px;
     padding-bottom: 2px;
-    color: black;
-    width: 420px;
-    margin-left: 22px;
-    border-radius: 10px;
 }
 .suggested-events-list {
     height: 280px;
@@ -195,18 +161,22 @@ h2.overhead {
     padding-bottom: 3px;
 }
 .col-md-9 {
-    padding-right: 99px;
-    margin-bottom: 22px;
+    padding-right: 102px;
     margin-top: 15px;
 }
 #my-events {
     margin-top: 20px;
 }
 #eventColumnSg {
-    background-color: rgba(77, 79, 80, 0.9);
-    margin-left: 60px;
-    margin-top: 30px;
+    background-color: rgb(227, 226, 226);
+    margin-left: 80px;
+    margin-top: 470px;
+    position: relative;
     border-radius: 10px;
+
+}
+#divsg {
+    position: absolute;
 }
 
 </style>
